@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>org.example.intellij-plugins</id>
+    <name>Android Dimensions Converter</name>
+    <version>0.0.1</version>
+    <vendor email="dbsdudguq@gmail.com" url="">YoungHyup Yun</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="TestAction" class="TestAction" text="Action">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+
+        <action id="action.ConversionPopupAction" class="action.ConversionPopupAction" text="Dimensions Conversion">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="PopupMenu-return"/>
+        </action>
+    </actions>
+</idea-plugin>
